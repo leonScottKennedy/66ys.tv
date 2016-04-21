@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<style>
+	body,ul,form,input{ margin:0; padding:0; font-size:12px;}
+	a{ text-decoration:none; color:#000; }
+	
+	#div12{ width:942px; height:52px; background:#f6ffdd; margin:20px auto; border:1px solid #97bf2b; padding:5px 6px 3px 10px; position:relative;}
+	#div12 #form a{ float:right; font-size:12px; line-height:24px; text-align:center; background:url(img/btn_bg.gif) repeat-x; display:inline-block; width:80px; height:24px; margin-left:4px; border-radius:2px; border:1px solid #ff9525; overflow:hidden;}
+	#div12 #form a:hover{ text-decoration:underline;}
+	#div12 #form1 #text{ width:402px; height:25px; border:1px solid #ff9525; color:#b5b5b5; position:absolute; left:10px;}
+	#div12 #form1 #search{ width:78px; height:27px; border-radius:2px; border:1px solid #ff9525; background:url(img/btn_bg.gif) repeat-x; overflow:hidden; font-size:14px; text-align:center; line-height:27px; position:absolute; left:420px;}
+	
+	
+	#div12 #div13{ width:942px; padding:5px 6px 3px 10px; position:absolute; left:0px; bottom:4px;}
+	#div12 #div13 ul{ display:inline-block; list-style:none; position:absolute; bottom:4px; left:64px;}
+	#div12 #div13 ul li{ float:left; margin-left:12px; font-size:12px; line-height:12px; }
+	#div12 #div13 ul li a{ color:#e12f61;}
+	#div12 #div13 ul li a:hover{ text-decoration:underline;}
+</style>
+<script>
+	window.onload = function(){
+		
+		//表单内容清空
+		var oText = document.getElementById('text');
+		
+		oText.onfocus = function(){
+			if(oText.value == '支持模糊搜索，例如十月围城，可搜索十月'){
+				oText.value = '';
+			}
+		}
+		oText.onblur = function(){
+			if(this.value == ''){
+				this.value = '支持模糊搜索，例如十月围城，可搜索十月';
+			}
+		}
+	}
+</script>
+</head>
+
+<body>
+<div id="div12">
+	<div id="form">
+        <form id="form1" action="http://www.baidu.com" method="post">
+            <input type="text" id="text" name="text" value="支持模糊搜索，例如十月围城，可搜索十月"/>
+            <input type="button" id="search" value="搜索影片"/>
+        </form>
+        <a href="#">设为首页</a>
+        <a href="#">观看帮助</a>
+        <a href="#">求片留言</a>
+        <a href="#">在线观看</a>
+        <a href="#">热播排行榜</a>
+    </div>
+    <div id="div13">
+    	<span>热门搜索:</span>
+    	<ul id="ul3">
+            <li><a href="#">速度与激情</a></li>
+            <li><a href="#">复仇者联盟</a></li>
+            <li><a href="#">战狼</a></li>
+            <li><a href="#">捉妖记</a></li>
+            <li><a href="#">盗墓笔记</a></li>
+            <li><a href="#">霍比特人</a></li>
+            <li><a href="#">小时代</a></li>
+            <li><a href="#">冰与火之歌</a></li>
+            <li><a href="#">变形金刚</a></li>
+            <li><a href="#">煎饼侠</a></li>
+            <li><a href="#">一路向西</a></li>
+            <li><a href="#">行尸走肉</a></li>
+            <li><a href="#">生活大爆炸</a></li>
+            <li><a href="#">终结者</a></li>
+            <li><a href="#">杀破狼2</a></li>
+    	</ul>
+    </div>
+</div>
+</body>
+</html>
